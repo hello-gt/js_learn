@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>学习js</title>
+	</head>
+	<script src="vue.js"></script>
+	<body>
+		<div id="vue_id">
+			<h1>site:{{site}}</h1>
+			<h1>url:{{url}}</h1>
+			<h1>{{detail()}}</h1>
+			
+		</div>
+	</body>
+	<script>
+		var data = {site:"hello world",url:"www.baidu.com"}
+		var vm = new Vue({
+			el:"#vue_id",
+			data:data,
+			methods:{
+				detail:function(){
+					return this.site + "--天天向上";
+				}
+			}
+		})
+		document.write(vm.url)
+		document.write("<br>")
+		document.write(data.url)
+		document.write("<br>")
+		console.log(vm.$el)
+		document.write("<br>")
+		console.log(vm.$data)
+	</script>
+</html>
