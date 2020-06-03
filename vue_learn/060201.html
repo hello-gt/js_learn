@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Vue.js 模板语法</title>
+	</head>
+	<style>
+	.class1{
+	  background: #444;
+	  color: #eee;
+	}
+	</style>
+	<body>
+		<div id="app">
+			<div v-html="message"></div>
+		</div>
+		<div id="app1">
+			<label for="r1">修改颜色</label><input type="checkbox" v-model="use" id="r1" />
+			<br><br />
+			<div v-bind:class="{'class1':use}">
+				v-bind:class 指令
+			</div>
+		</div>
+		<div id="app2">
+			{{5+17}}
+			{{ok ? "YES":"No"}}
+			
+			
+		</div>
+	</body>
+	<script src="./vue.js"></script>
+	<script>
+		<!---html--->
+		var data = {message:"模板语法hello world"}
+		var vm = new Vue({
+			el:"#app",
+			data:data
+		});
+		<!---属性--->
+		var vm1 = new Vue({
+			el:"#app1",
+			data:{
+				use:false
+			}
+		});
+	</script>
+</html>
