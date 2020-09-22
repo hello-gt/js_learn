@@ -1,0 +1,53 @@
+<!DOCTYPE html> <html><head> <meta http-equiv="content-type"
+content="text/html; charset=UTF-8"> <meta charset="utf-8">
+<title>多文件预览上传</title>
+<link rel="stylesheet" href="Upload_files/zyUpload.css" type="text/css">
+<script src="Upload_files/jquery-1.js"></script><script src="Upload_files/jquery.js"></script>
+<script type="text/javascript" src="Upload_files/zyFile.js"></script>
+<script type="text/javascript" src="Upload_files/zyUpload.js"></script>
+<script type="text/javascript" src="Upload_files/jqueryrotate.js"></script>
+<script type="text/javascript" src="Upload_files/index.js"></script>
+</head>
+<body>
+<h1 style="text-align:center;">图片上传</h1>
+<div id="demo" class="demo" style="width: 650px; height: 400px;"> 
+	<form id="uploadForm" action="/upload/UploadAction" method="post" enctype="multipart/form-data">	
+		<div class="upload_box">		
+			<div class="upload_main">			
+				<div class="upload_choose">				
+					<div class="convent_choice">					
+						<div class="andArea">						
+							<div class="filePicker">点击选择文件</div>						
+							<input id="fileImage" type="file" size="30" name="fileselect[]" multiple="">					
+						</div>				
+					</div>				
+					<span id="fileDragArea" class="upload_drag_area">或者将文件拖到此处</span>			
+				</div>			
+					<div class="status_bar">				
+						<div id="status_info" class="info">
+							
+						</div>				
+						<div class="btns">					
+							<div class="webuploader_pick">
+								继续选择
+							</div>					
+							<div class="upload_btn">
+								开始上传
+							</div>				
+						</div>			
+					</div>			
+					<div id="preview" class="upload_preview">
+						
+					</div>		
+				</div>		
+				<div class="upload_submit">			
+					<button type="button" id="fileSubmit" class="upload_submit_btn">确认上传文件</button>		
+				</div>		
+				<div id="uploadInf" class="upload_inf">		
+			</div>	
+		</div>
+	</form>
+</div>
+
+</body>
+</html>
